@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Sobre mi";
+
+const identidad = {
+    firstName: "Antonio",
+    contry: "Mexico",
+    occupation: "Programador Jr.",
+    hobbis: ["Videojuesgos","Soccer","Programacion",
+    "Freestyle"]
+};
+
+const skills = ["HTML","CSS","JAVASCRIPT","REACT",
+"ASTRO","JAVA","NODEJS","WEBPACK","MYSQL"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+ <style define:vars={{skillColor, fontWeight, textCase}}>
+    h1 {
+        color: purple;
+        font-size: 4rem;
+    }
+    .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+    }
+    </style>
+
+    <h2>... ¡y mi nuevo sitio Astro!</h2>
+
+        <p>Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda página de mi sitio web, 
+            ¡y es la primera que he construido yo mismo!</p>
+
+        <p>Este sitio se irá actualizando a medida que vaya 
+            completando más partes del tutorial, ¡así que no dejes 
+            de visitarlo para ver cómo va mi viaje!
+        </p>
+
+        <p>Algunos Datos sobre mi:</p>
+        <ul>
+            <li>Mi nombre es {identidad.firstName}</li>  
+            <li>Actualmente resido en {identidad.contry} 
+                y soy {identidad.occupation}.</li>
+            {identidad.hobbis.length >= 2 &&
+            <li>Dos de mis pasatiempos son: {identidad.hobbis[2]} 
+            y {identidad.hobbis[3]} </li>}
+
+        </ul>
+        <p>Mis Habilidades son:</p>
+        <ul>
+            {skills.map((skill)=><li class="skill">{skill}</li>)}
+        </ul>
+
+        {happy && <p>¡Estoy feliz de aprender Astro!</p>}
+
+        {finished && <p>¡He terminado este tutorial!</p>}
+
+        {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
+
+</BaseLayout>
+    
+      
+
+
+
+
+
+
+
+
+
+
