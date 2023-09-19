@@ -6,13 +6,25 @@ const pageTitle = "Mi Blog sobre Astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <p>Aquí es donde publicaré acerca de mi viaje aprendiendo Astro.</p>
+    <p class="parrafo1">Aquí es donde publicaré acerca de mi viaje aprendiendo Astro.</p>
         <ul>
           {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
         </ul>
 </BaseLayout>
 
-    
+<style>
+  .parrafo1{
+    width: 250px;
+    height: 80px;
+    background-color: #4d4747;
+    padding: 10px 10px;
+    border-radius: 15px;
+    border: solid 2px rgb(27, 25, 25);
+    box-shadow: 0 0 5px rgba(10, 10, 10, 0.7);
+    color: white;
+    font-size: 20px;
+  }
+</style>
    
 
 

@@ -3,5 +3,246 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Inicio";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>Bienvenido a mi primer blog hecho con Astro.</h2>
+  <h2 class="titulo1">Bienvenido a mi primer blog hecho con Astro.</h2>
+  
+  <seccion>
+    <div class="profile-container">
+      <div class="profile">
+          <img src="./src/img/13.gif" alt="" />
+  
+          <div class="info">
+              <div class="header">
+                  <div class="photo">
+                      <img src="./src/img/13.gif" alt="" />
+                  </div>
+  
+                  <div class="action">
+                    <a href="https://www.linkedin.com/in/antonio-garrido-9013b7249"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                      <path d="M8 11l0 5"></path>
+                      <path d="M8 8l0 .01"></path>
+                      <path d="M12 16l0 -5"></path>
+                      <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                   </svg>Follow me</button>	
+                  </div>		
+              </div>
+              <div class="user-info">
+                  <div class="name">
+                      <a href="https://github.com/aressantonio">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                           </svg>
+                          My Github
+                      </a>
+                  </div>
+  
+                  <div class="user-name">
+                      Antonio_Garrido.
+                  </div>
+              </div>
+  
+              <div class="description">
+                      ING. Entornos virtuales y Negocios Digitales.<br> 
+                      Desarrollador Web.<br><hr>
+                      Soy un entusiasta de la tecnologia,<br>
+                      Me gusta aprender sobre diferentes frameworks de desarrollo web, 
+                      asi como lenguajes de programacion.<br>
+                      Me considero alguien que siempre busca estar actualizado en este facinante mundo de la programacion.
+              </div>
+          </div>	
+      </div>
+    </div>
+  </seccion>
+  
 </BaseLayout>
+
+<style>
+
+  .titulo1{
+    width: 250px;
+    height: 80px;
+    background-color: #4d4747;
+    padding: 10px 10px;
+    border-radius: 15px;
+    border: solid 2px rgb(27, 25, 25);
+    box-shadow: 0 0 5px rgba(10, 10, 10, 0.7);
+    color: white;
+  }
+  .profile-container{
+    width: 68px;
+    margin-top: 45px;
+    margin-right: 470px;
+    margin-left: 50px;
+
+  }
+
+  .profile-container .profile img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid 3px white;
+    cursor: pointer;
+  }
+
+  .profile-container .profile img:hover{
+    transform: scale(1.1);
+    background-color: #222;
+  }
+
+  .profile-container .profile:hover .info{
+    display: flex;
+
+    animation: show 0.8s ease;
+  }
+
+  .profile-container .profile .info{
+    position: absolute;
+    width: 340px;
+    min-height: 400px;
+    max-height: 450px;
+    background-color: #222;
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    display: none;
+    flex-direction: column;
+  }
+
+  .profile-container .profile a{
+    color: white;
+    text-decoration: none;
+
+  }
+
+  .profile-container .profile a:hover{
+    text-decoration: underline;
+    color: skyblue;
+  }
+
+  .profile-container .profile .header{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .profile-container .profile .header img{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    border: solid 4px skyblue;
+  }
+
+  .profile-container .profile .header button{
+    min-width: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+    color: black;
+
+  }
+
+  .profile-container .profile .header button:hover{
+    background-color: skyblue;
+    color: white;
+  }
+
+  .profile-container .profile .user-info{
+    padding: 10px 0;
+  }
+
+  .profile-container .profile .user-info .name{
+    font-weight: bolder;
+  }
+
+  .profile-container .profile .user-info .user-name{
+    color: #aaa;
+  }
+
+  .profile-container .profile .description{
+    padding: 10px  0 2px 0;
+    flex: 1;
+  }
+
+  .profile-container .profile .description a{
+    color: #008cff;
+    text-decoration: none;
+  }
+
+  .profile-container .profile .description a:hover{
+    text-decoration: underline;
+    color: skyblue;
+  }
+
+  .profile-container .profile .followers-container{
+    gap: 10px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    
+
+  }
+
+  .profile-container .profile .followers-container a{
+    color: #aaa;
+  }
+
+
+  .profile-container .profile .followers-container .number{
+    font-weight: bolder;
+    color: white;
+  }
+
+
+  .profile-container .profile .other{
+    padding: 10px 0;
+  }
+
+  .profile-container .profile .other a{
+    color: #777;
+    display: flex;
+  }
+
+  .profile-container .profile .other a .photos{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    margin-right: 25px;
+  }
+
+  .profile-container .profile .other a .photos img{
+    width: 30px;
+    height: 30px;
+    background-color: #222;
+    border: solid 2px #ccc;
+    margin-right: -20px;
+  }
+
+  .profile-container .profile .other a .photos img:hover{
+    transform: translateY(-9px);
+  }
+
+  @keyframes show{
+    from{
+      opacity: 0;
+    }
+
+    to{
+      opacity: 1;
+    }
+  }
+
+  .about{
+    justify-content: flex-start;
+    margin-right: 100px;
+  }
+</style>
