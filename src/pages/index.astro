@@ -1,10 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting';
 const pageTitle = "Inicio";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2 class="titulo1">Bienvenido a mi primer blog hecho con Astro.</h2>
-  
+  <h2 class="titulo1">
+    Bienvenido a mi primer blog hecho con Astro.
+  </h2>
+  <h3 class="titulo1">
+    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari",'Hi','Buenas']} />
+  </h3><br>
   <seccion>
     <div class="profile-container">
       <div class="profile">
