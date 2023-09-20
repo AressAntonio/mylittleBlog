@@ -46,5 +46,21 @@ All commands are run from the root of the project, from a terminal:
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
-<a href="https://aressantonio-littleblog.netlify.app/"><strong>Visita mi blog</strong></a>
+
+<hr align="center"><a href="https://aressantonio-littleblog.netlify.app/", align="center">Ir a Proyecto.</a><hr><br>
+<table>
+ <tr>
+  <th>Vista Previa</th>
+ </tr>
+ <tr>
+   <video controls width=250, height=250, autoplay>
+    <sourse src="https://github.com/AressAntonio/mylittleBlog/assets/99376135/5b37110c-1ca8-47df-b4d3-89a6f101882a"  type="video/mp4" /> 
+   </video>
+ </tr>
+</table>
+
+
+
+
+https://github.com/AressAntonio/mylittleBlog/assets/99376135/5b37110c-1ca8-47df-b4d3-89a6f101882a
 
