@@ -1,12 +1,18 @@
 /* nav styles */
+
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
 body{
 	font-family: sans-serif;
 	width: 100%;
 	height: auto;
-
-	background: linear-gradient(to right, skyblue, white);
-
-	
+ 
 }
 
 .hamburger {
@@ -54,7 +60,22 @@ body{
   display: unset;
 }
 
-@media screen and (min-width: 636px) {
+.btn{
+  background-color: blueviolet;
+  border-radius: 12px;
+  padding: 5px 10px;
+  border: none;
+  color: #fff;
+  box-shadow: 0 0 5px rgba(10, 10, 10, 0.7);
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: #ff9776;
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 655px) {
   .nav-links {
     margin-left: 5em;
     display: block;
@@ -62,6 +83,8 @@ body{
     width: auto;
     background: none;
   }
+
+  
 
   .nav-links a {
     display: inline-block;
@@ -71,4 +94,5 @@ body{
   .hamburger {
     display: none;
   }
+  
 }

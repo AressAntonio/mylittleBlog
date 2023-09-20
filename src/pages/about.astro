@@ -14,7 +14,7 @@ const skills = ["HTML","CSS","JAVASCRIPT","REACT",
 "ASTRO","JAVA","NODEJS","WEBPACK","MYSQL"];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 
 const skillColor = "navy";
@@ -23,19 +23,9 @@ const textCase = "uppercase";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
- <style define:vars={{skillColor, fontWeight, textCase}}>
-    h1 {
-        color: purple;
-        font-size: 4rem;
-    }
-    .skill {
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-    }
-    </style>
 
-    <h2>... ¡y mi nuevo sitio Astro!</h2>
+    <section class="aboutme">
+        <h2>... ¡y mi nuevo sitio Astro!</h2>
 
         <p>Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda página de mi sitio web, 
             ¡y es la primera que he construido yo mismo!</p>
@@ -55,21 +45,47 @@ const textCase = "uppercase";
             y {identidad.hobbis[3]} </li>}
 
         </ul>
+
         <p>Mis Habilidades son:</p>
         <ul>
             {skills.map((skill)=><li class="skill">{skill}</li>)}
         </ul>
-
+    
         {happy && <p>¡Estoy feliz de aprender Astro!</p>}
-
+    
         {finished && <p>¡He terminado este tutorial!</p>}
-
+    
         {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
+
+    </section>
+
 
 </BaseLayout>
     
       
-
+<style define:vars={{skillColor, fontWeight, textCase}}>
+    h1 {
+        color: purple;
+        font-size: 4rem;
+    }
+    .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+    }
+    .aboutme{
+     width: 570px;
+     height: 580px;
+     background-color: #4d4747;
+     padding: 10px 10px;
+     border-radius: 15px;
+     border: solid 2px rgb(27, 25, 25);
+     box-shadow: 0 0 5px rgba(10, 10, 10, 0.7);
+     color: white;
+     margin-left: 15px; 
+    }
+   
+ </style>
 
 
 
