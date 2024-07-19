@@ -4,3 +4,31 @@ const { title, url } = Astro.props;
 <ul>
     <li><a href={url}>{title}</a></li>
 </ul>
+
+<style>
+    ul{
+
+        /*list-style-type: "❤️";*/
+        list-style-type: "➡️";
+    }
+    ul li{
+
+        margin-top: 10px;
+        text-align: center;
+        padding: 10px;
+        background-color: #4d4747;
+        border-radius: 10px;
+        border: solid 2px #ff9776;
+    }
+    a{ 
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    ul li:hover{
+        background-color: #ff9776;
+        transition: all 0.5s ease;
+        transform: scale(1.1);
+    }
+</style>

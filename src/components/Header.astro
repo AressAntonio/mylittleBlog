@@ -11,3 +11,26 @@ import ThemeIcon from './ThemeIcon.astro';
         <Navigation />
     </nav>
 </header>
+
+<style>
+    header{
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        border: 2px solid #ff9776;
+        background-color: #fff;
+        box-shadow: 10 10 10 rgba(0,0,0, 0.7);
+        border-radius: 12px;
+        padding: 10px;
+          
+    }
+    header nav{
+      display: flex;
+      align-items: center;
+    }
+</style>

@@ -1,6 +1,6 @@
 import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 
-export async function get() {
+export async function GET(context) {
   return rss({
     title: 'AressAntonio | Blog',
     description: 'Mi viaje en el mundo de la programacion',
